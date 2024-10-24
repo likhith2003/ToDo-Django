@@ -1,0 +1,35 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <h1>REGISTER</h1>
+</div>
+
+<div class="card-body">
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <label> {{form.username.label}}</label>
+        {{form.username}}
+
+        <label> {{form.password1.label}}</label>
+        {{form.password1}}
+        <small style="color: #666;">Password must be at least 8 characters long and not common</small>
+
+        <label> {{form.password2.label}}</label>
+        {{form.password2}}
+        <small style="color: #666;">Confirm your password</small>
+
+        <input style="margin-top:10px" class="button" type="submit" value="Register">
+    </form>
+    <p>Here already? Login <a href="{% url 'login' %}">here</a></p>
+</div>
+
+{% endblock content %}
