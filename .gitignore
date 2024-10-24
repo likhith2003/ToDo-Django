@@ -1,6 +1,8 @@
 # Python files
 *.pyc
 __pycache__/
+todo_list/__pycache__/
+base/__pycache__
 
 # Virtual environment
 env/
