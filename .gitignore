@@ -2,7 +2,9 @@
 *.pyc
 __pycache__/
 todo_list/__pycache__/
-base/__pycache__
+base/__pycache__/
+# Ignore all __pycache__ directories
+**/__pycache__/
 
 # Virtual environment
 env/
